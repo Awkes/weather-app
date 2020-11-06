@@ -1,0 +1,33 @@
+.error, .loading { 
+  text-align: center;
+  padding: 20px;
+}
+
+.error { color: var(--color-text-error) }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper > * { margin: 16px }
+
+.wrapper > *:last-child { flex: 1 }
+
+@media(min-width: 800px) {
+  .wrapper {
+    flex-direction: row;
+  }
+ 
+  .wrapper > *:first-child { 
+    min-width: 400px;
+    width: 30%;
+    margin: 0; 
+    overflow: auto;
+  }
+
+  .wrapper > *:last-child {
+    margin: 32px 32px 32px 44px;
+  }
+}
