@@ -1,13 +1,24 @@
-
 .list {
   padding: 0;
   margin: 24px 0 0 0;
   list-style-type: none;
-  cursor: pointer;
 }
 
-.item { padding-top: 8px }
 .item:not(:last-child) { border-bottom: 1px solid var(--color-line) }
+
+.item > button { 
+  padding: 8px 0 0 0;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  text-align: left;
+  margin: 0;
+  border: 0;
+  font-family: inherit;
+  color: var(--color-text);
+  outline: none;
+}
 
 .topRow {
   display: flex;
@@ -46,11 +57,11 @@
 
 .topRow, .open .bottomRow { padding-bottom: 8px }
 .open .bottomRow { max-height: 50px }
-.bottomRow > time { font-weight: 400 }
+.time { font-weight: 400 }
 
 @media(min-width: 800px) {
   .list { margin: 48px 0 0 0 }
-  .item { padding-top: 16px }
+  .item > button { padding: 16px 0 0 0 }
   .item:not(:last-child) { border-bottom: 2px solid var(--color-line) }
   .topRow { font-size: 36px }
   .topRow, .open .bottomRow { padding-bottom: 16px }
