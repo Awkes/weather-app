@@ -6,7 +6,7 @@
   cursor: pointer;
 }
 
-.item { padding: 8px 0 }
+.item { padding-top: 8px }
 .item:not(:last-child) { border-bottom: 1px solid var(--color-line) }
 
 .topRow {
@@ -19,7 +19,6 @@
 .date { flex: 1 }
 
 .maxTemp, .minTemp {
-  align-self: flex-end;
   margin-left: 8px;
   width: 20px;
 }
@@ -32,7 +31,6 @@
 }
 
 .bottomRow {
-  padding-top: 8px;
   display: grid;
   grid-auto-flow: column;
   grid-template: auto auto / auto auto;
@@ -46,22 +44,19 @@
   transition: max-height .2s;
 }
 
+.topRow, .open .bottomRow { padding-bottom: 8px }
 .open .bottomRow { max-height: 50px }
 .bottomRow > time { font-weight: 400 }
 
 @media(min-width: 800px) {
   .list { margin: 48px 0 0 0 }
-  .item { padding: 16px 0 }
+  .item { padding-top: 16px }
   .item:not(:last-child) { border-bottom: 2px solid var(--color-line) }
   .topRow { font-size: 36px }
-
-  .bottomRow { 
-    font-size: 24px;
-    padding-top: 16px;
-  }
-
+  .topRow, .open .bottomRow { padding-bottom: 16px }
+  .bottomRow { font-size: 24px }
   .open .bottomRow { max-height: 100px }
-
+  
   .minTemp, .maxTemp { 
     margin-left: 16px;
     width: 50px;
