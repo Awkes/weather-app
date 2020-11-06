@@ -20,7 +20,7 @@
 
 .maxTemp, .minTemp {
   margin-left: 8px;
-  width: 20px;
+  min-width: 20px;
 }
 
 .maxTemp { color: var(--color-text-highlight) }
@@ -59,6 +59,6 @@
   
   .minTemp, .maxTemp { 
     margin-left: 16px;
-    width: 50px;
+    min-width: 50px;
   }
 }
