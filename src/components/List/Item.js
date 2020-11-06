@@ -8,18 +8,20 @@ const Item = ({ date, minTemp, maxTemp, sunrise, sunriseText, sunset, sunsetText
   }
 
   return (
-    <li className={styles.item} onClick={toggleOpen}>
-      <div className={styles.topRow}>
-        <time className={styles.date}>{date}</time>
-        <div className={styles.maxTemp}>{maxTemp}</div>
-        <div className={styles.minTemp}>{minTemp}</div>
-      </div>
-      <div className={styles.bottomRow}>
-        <div>{sunriseText}</div>
-        <time>{sunrise}</time>
-        <div>{sunsetText}</div>
-        <time>{sunset}</time>
-      </div>
+    <li className={styles.item}>
+      <button onClick={toggleOpen}>
+        <span className={styles.topRow}>
+          <span className={styles.date}>{date}</span>
+          <span className={styles.maxTemp}>{maxTemp}</span>
+          <span className={styles.minTemp}>{minTemp}</span>
+        </span>
+        <span className={styles.bottomRow}>
+          <span>{sunriseText}</span>
+          <span className={styles.time}>{sunrise}</span>
+          <span>{sunsetText}</span>
+          <span className={styles.time}>{sunset}</span>
+        </span>
+      </button>
     </li>
   );
 }
