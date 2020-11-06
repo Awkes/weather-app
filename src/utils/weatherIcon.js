@@ -21,7 +21,7 @@ const WEATHER_ICONS = {
 }
 
 export default function weatherIcon(weatherDescription) {
-  const desc = weatherDescription.split(' ').join('').toLowerCase();
+  const desc = weatherDescription?.split(' ').join('').toLowerCase();
   const icon = Object.keys(WEATHER_ICONS).find(key => key === desc) || 'unknown';
   return WEATHER_ICONS[icon];
 }
