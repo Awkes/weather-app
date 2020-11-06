@@ -9,13 +9,13 @@ const Card = ({ description, feelsLike, heading, icon, temp }) => (
       {heading}
     </Heading>
     <div className={styles.temp}>
-      {temp}°
+      {temp}
     </div>
     <div className={styles.icon}>
       {icon}
     </div>
     <div className={styles.feelsLike}>
-      Feels like {feelsLike}°
+      {feelsLike}
     </div>
     <div className={styles.description}>
       {description}
@@ -27,8 +27,8 @@ export default Card;
 
 Card.propTypes = {
   description: PropTypes.string.isRequired,
-  feelsLike: PropTypes.number.isRequired,
+  feelsLike: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
-  temp: PropTypes.number.isRequired,
+  temp: PropTypes.string.isRequired,
 }
