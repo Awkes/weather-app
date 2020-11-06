@@ -30,7 +30,7 @@ const Weather = () => {
   const feelsLike = (current?.FeelsLikeC || '0') + '°';
   const icon = weatherIcon(description);
   const temp = (current?.temp_C || '0') + '°';
-  const items = data?.korv?.weather?.map(day => ({
+  const items = data?.weather?.map(day => ({
     date: formatDate(day?.date),
     maxTemp: (day?.maxtempC || '0') + '°',
     minTemp: (day?.mintempC || '0') + '°',
