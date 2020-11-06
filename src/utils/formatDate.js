@@ -28,8 +28,8 @@ export default function formatDate(dateString) {
   const weekday = weekdays[date.getDay()];
   const day = date.getDate();
   const month = months[date.getMonth()];
-
-  return (weekday !== undefined && day !== NaN && month !== undefined )
+  
+  return (weekday !== undefined && !isNaN(day) && month !== undefined )
     ? `${weekday}, ${day} ${month}`
     : null
 }
