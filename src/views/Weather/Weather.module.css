@@ -1,6 +1,8 @@
 .error, .loading { 
-  text-align: center;
-  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .error { color: var(--color-text-error) }

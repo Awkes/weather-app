@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../../components/Card';
 import List from '../../components/List';
+import Spinner from '../../components/Spinner';
 import { getWeatherData } from '../../api';
 import weatherIcon from '../../utils/weatherIcon';
 import formatDate from '../../utils/formatDate';
@@ -17,7 +18,7 @@ const Weather = () => {
   }, []);
 
   if (error) return <div className={styles.error}>{error}</div>;
-  if (!data) return <div className={styles.loading}>Loading ...</div>;
+  if (!data) return <div className={styles.loading}><Spinner /></div>;
  
   const cardHeading = 'Today';
   const listHeading = 'Upcoming days';
